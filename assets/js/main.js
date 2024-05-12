@@ -101,5 +101,19 @@ window.addEventListener('load', function () {
             this.collisions = this.collisions.filter(collision => !collision.markedForDeletion);
             this.floatingMessages = this.floatingMessages.filter(message => !message.markedForDeletion);
         }
+        draw(context) {
+            this.backgroundLayers.draw(context);
+            this.player.draw(context);
+            this.enemies.forEach(enemy => {
+                enemy.draw(context);
+            });
+            this.collisions.forEach(collision => {
+                collision.draw(context);
+            });
+            this.floatingMessages.forEach(message => {
+                message.draw(context);
+            });
+            this.UI.draw(context);
+        }
     }
 })
