@@ -31,5 +31,51 @@ export class InputHandler {
                 this.keys.splice(this.keys.indexOf(e.key), 1);
             } 
         });
+        window.addEventListener('touchstart', e => {
+            console.log(e);
+            this.touchX = e.changedTouches[0].pageX;
+            this.touchY = e.changedTouches[0].pageY;  
+        });
+        window.addEventListener('touchmove', e => {
+            console.log(e);
+            // Jump
+            const swipeDistance = e.changedTouches[0].pageY - this.touchY;
+            if( swipeDistance < -this.touchTreshold && this.keys.indexOf('swipe up') === -1){
+                this.keys.push('swipe up');}
+                // Reset
+            else if(swipeDistance > this.touchTreshold && this.keys.indexOf('swipe down') === -1){
+                this.keys.push('swipe down');   
+                if (this.game.gameOver) {this.game.restartGame()};
+            }
+            //Running
+            const swipeDistanceX = e.changedTouches[0].pageX - this.touchX;
+            if( swipeDistanceX > this.touchTreshold && this.keys.indexOf('swipe right') === -1)
+                {this.keys.push('swipe right');}
+            else if (swipeDistanceX < -this.touchTreshold && this.keys.indexOf('swipe left') === -1)
+                {this.keys.push('swipe left');}
+            else if( swipeDistanceX > this.dashTreshold && this.keys.indexOf('long swipe') === -1)
+                {this.keys.push('long swipe');}
+            else if( swipeDistanceX < -this.dashTreshold && this.keys.indexOf('long swipe') === -1)
+                {this.keys.push('long swipe');}
+            //Attack
+               if ((swipeDistanceX < -this.atkTreshold || swipeDistanceX >this.atkTreshold) && this.keys.indexOf('tap') === -1){
+                  this.keys.push('tap')
+              } else if ((swipeDistance < -this.atkTreshold || swipeDistance > this.atkTreshold) && this.keys.indexOf('tap') === -1 ){
+                  this.keys.push('tap');
+             }  else {
+                 this.keys.splice(this.keys.indexOf('tap'), 1)
+             }
+            console.log(this.keys);
+        });
+        window.addEventListener('touchend', e => {
+            this.keys.splice(this.keys.indexOf('tap'), 1)
+            this.keys.splice(this.keys.indexOf('swipe up'), 1)
+            this.keys.splice(this.keys.indexOf('swipe down'), 1)
+            this.keys.splice(this.keys.indexOf('swipe right'), 1)
+            this.keys.splice(this.keys.indexOf('swipe left'), 1)
+            this.keys.splice(this.keys.indexOf('long swipe'), 1)
+        });
+
     }
+    
 }
