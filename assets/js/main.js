@@ -42,5 +42,26 @@ window.addEventListener('load', function () {
             this.player.currentState = this.player.states[0];
             this.player.currentState.enter();
         }
+        restartGame(){
+            this.player.x = 100;
+            this.player.y = this.height - this.player.height - this.groundMargin;
+            this.player.frameY = 0;
+            this.player.maxFrame = 3;
+            this.player.currentState = this.player.states[0]; 
+            this.backgroundLayers = new Background(this);
+            this.enemies = [];
+            this.collisions = [];
+            this.floatingMessages = [];
+            this.speed = 0;
+            this.score = 0;
+            this.time = 0;
+            this.hearts = 10;
+            this.player.vy = 0;
+            this.debug = false;
+            this.cooldown = false;
+            this.gameOver = false;
+            document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
+            animate(0);
+        }
     }
 })
