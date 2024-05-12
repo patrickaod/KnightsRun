@@ -48,7 +48,6 @@ body{
 }
 
 /* Heading Settings */
-
 h1, h2 {
     font-size: 6.9vh;
     text-align: center;
@@ -56,8 +55,8 @@ h1, h2 {
    -webkit-text-fill-color: transparent;
    background-clip: text;
 }
-/* Tutorial Icon Settings */
 
+/* Tutorial Icon Settings */
 #btn {
     position: absolute;
     background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%); 
@@ -67,11 +66,31 @@ h1, h2 {
     font-size: clamp(1.5rem, 2.5vw, 4rem); 
     cursor: pointer; 
     bottom: 0%;
-  }
+}
   
-  #btn:hover {
+#btn:hover {
     background: linear-gradient(180deg, #FEFF7B 33%, #FF8C42 100%); 
-  }
+}
 
+/* Media Queries */
+@media (min-width: 1800px){
+    #canvas1{
+         margin-top: 35vh;
+         height: 700px;
+         width: 700px;
+    }
+}
 
+@media (min-width: 2400px){
+    #canvas1{
+         height: 800px;
+         width: 800px;
+    }
+} 
+
+@media (300px <= width <= 500px) {
+    .container{
+         transform: translate(-50%, -155%);
+    }
+}
 
