@@ -165,3 +165,12 @@ window.addEventListener('load', function () {
     // First Animate Call 
     animate(0);
 });
+
+// Tutorial Button
+document.getElementById("btn").addEventListener("click", function(){
+    alert(
+        " Tutorial: \n" + " Up Arrow / Swipe Up = Jump \n"
+        + " Right & Left Arrow / Swipe Right = Run \n" + " Down Arrow / Down Swipe = Crouch \n" +
+        " Space / Tap = Attack \n" + " Hash / Long Swipe = Dash \n" + " Press r / Swipe Down = Restart \n" + " Press d = Debug"
+    )
+});
