@@ -47,6 +47,31 @@ body{
     display: none;
 }
 
+/* Heading Settings */
+
+h1, h2 {
+    font-size: 6.9vh;
+    text-align: center;
+    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
+   -webkit-text-fill-color: transparent;
+   background-clip: text;
+}
+/* Tutorial Icon Settings */
+
+#btn {
+    position: absolute;
+    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%); 
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: clamp(1.5rem, 2.5vw, 4rem); 
+    cursor: pointer; 
+    bottom: 0%;
+  }
+  
+  #btn:hover {
+    background: linear-gradient(180deg, #FEFF7B 33%, #FF8C42 100%); 
+  }
 
 
 
