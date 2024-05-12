@@ -88,9 +88,3 @@ h1, h2 {
     }
 } 
 
-@media (300px <= width <= 500px) {
-    .container{
-         transform: translate(-50%, -155%);
-    }
-}
-
