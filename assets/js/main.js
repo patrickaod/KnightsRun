@@ -107,7 +107,7 @@ window.addEventListener('load', function () {
                     this.cooldownTimer += deltaTime;
                 }
             };
-            // updates score
+            // update local score
             if (this.score > localStorage.getItem("score")) localStorage.setItem("score", this.score);
             /* 
                Array Filters
@@ -118,6 +118,10 @@ window.addEventListener('load', function () {
             this.collisions = this.collisions.filter(collision => !collision.markedForDeletion);
             this.floatingMessages = this.floatingMessages.filter(message => !message.markedForDeletion);
         }
+        /* Draw Method 
+           Draws the player, background, enemies, collisions, floating messages, 
+           and the UI on the canvas background.
+        */
         draw(context) {
             this.backgroundLayers.draw(context);
             this.player.draw(context);
@@ -132,17 +136,23 @@ window.addEventListener('load', function () {
             });
             this.UI.draw(context);
         }
+        /* addEnemy() 
+           Enemy selection
+        */
         addEnemy() {
             if (this.speed > 0 && Math.random() < 0.5) this.enemies.push(new GroundEnemy(this));
             else if (this.speed > 0) this.enemies.push(new ClimbingEnemy(this));
             this.enemies.push(new FlyingEnemy(this));
         }
     }
-
+    
     const game = new Game(canvas.width, canvas.height);
     let lastTime = 0;
 
-
+    /* Animate()
+       In respect to delta time each frame is rendered on the canvas.
+       While gameOver is false.
+    */
     function animate(timeStamp) {
         const deltaTime = timeStamp - lastTime;
         lastTime = timeStamp;
@@ -152,5 +162,6 @@ window.addEventListener('load', function () {
         if (!game.gameOver) requestAnimationFrame(animate);
     }
 
+    // First Animate Call 
     animate(0);
 });
