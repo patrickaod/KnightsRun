@@ -1,3 +1,8 @@
+import { Player } from './player.js';
+import { InputHandler } from './input.js';
+import { Background } from './background.js';
+import { FlyingEnemy, ClimbingEnemy, GroundEnemy } from './enemies.js';
+import { UI } from './ui.js';
 
 // Runs when page is completed loading assets
 window.addEventListener('load', function () {
