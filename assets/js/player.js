@@ -1,3 +1,6 @@
+import { Idel, Crouching, Walking, Jumping, Falling, Attack, Hurt, Dashing} from './playerStates.js';
+import { CollisionAnimation } from './collisionAnimation.js';
+import { FloatingMessages } from './floatingMessages.js';
 export class Player {
     constructor(game) {
         this.game = game;
