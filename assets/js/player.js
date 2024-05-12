@@ -53,4 +53,45 @@ export class Player {
         if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image[this.frameY], this.frameX * this.width, 0, this.width, this.height, this.x, this.y, this.width, this.height);
     }
+    onGround() {
+        return this.y >= this.game.height - this.height - this.game.groundMargin;
+    }
+    setState(state, speed) {
+        this.currentState = this.states[state];
+        this.game.speed = this.game.maxSpeed * speed;
+        this.currentState.enter();
+    }
+    checkCollision() {
+        this.game.enemies.forEach(enemy => {
+            //Attack Collision
+            if (
+                enemy.x < this.x + this.width &&
+                enemy.x + enemy.width > this.x &&
+                enemy.y < this.y + this.height &&
+                enemy.y + enemy.height > this.y &&
+                this.currentState === this.states[5]
+            ) {
+                enemy.markedForDeletion = true;
+                this.game.collisions.push(new CollisionAnimation(this.game, enemy.x +
+                    enemy.width * 0.5, enemy.y + enemy.height * 0.5));
+                this.game.score++;
+                this.game.floatingMessages.push(new FloatingMessages('+1', enemy.x, enemy.y, 180, 50));
+            }
+            // Hitbox Collision
+            else if (
+                enemy.x < (this.x + 40) + (this.width * 0.22) &&
+                enemy.x + enemy.width > (this.x + 40) &&
+                enemy.y < (this.y + 5) + (this.height - 5) &&
+                enemy.y + enemy.height > (this.y + 5) && 
+                !enemy.hasCollided
+            ) {
+                enemy.hasCollided = true;
+                this.setState(6, 0);
+                this.game.score -= 1;
+                this.game.floatingMessages.push(new FloatingMessages('-1', enemy.x, enemy.y, 180, 50));
+                this.game.hearts--;
+                if (this.game.hearts <= 0) this.game.gameOver = true;
+            }
+        });
+    }
 }
