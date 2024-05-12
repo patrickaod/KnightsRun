@@ -42,6 +42,11 @@ window.addEventListener('load', function () {
             this.player.currentState = this.player.states[0];
             this.player.currentState.enter();
         }
+        /* restartGame()
+           Resets all variables back to original states
+           Updates game highscore
+           then calls the animate function
+        */
         restartGame(){
             this.player.x = 100;
             this.player.y = this.height - this.player.height - this.groundMargin;
@@ -63,9 +68,16 @@ window.addEventListener('load', function () {
             document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
             animate(0);
         }
+        /* update()
+           updates the main game file with addition javascript files
+           in relation to deltaTime
+        */
         update(deltaTime) {
+            // The change in time add to the overall time
             this.time += deltaTime;
+            // Adds a maximum time allowance to the game 
             if (this.time > this.maxTime) this.gameOver = true;
+            // Update Game features 
             this.backgroundLayers.update();
             this.player.update(this.input.keys, deltaTime);
             //handleEnemies
@@ -95,8 +107,13 @@ window.addEventListener('load', function () {
                     this.cooldownTimer += deltaTime;
                 }
             };
-            //score
+            // updates score
             if (this.score > localStorage.getItem("score")) localStorage.setItem("score", this.score);
+            /* 
+               Array Filters
+               Instead of splice, array filters are used to remove marked elements
+               because the deletion can happen in the same loop as the animation. 
+            */
             this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
             this.collisions = this.collisions.filter(collision => !collision.markedForDeletion);
             this.floatingMessages = this.floatingMessages.filter(message => !message.markedForDeletion);
@@ -121,7 +138,7 @@ window.addEventListener('load', function () {
             this.enemies.push(new FlyingEnemy(this));
         }
     }
-        
+
     const game = new Game(canvas.width, canvas.height);
     let lastTime = 0;
 
