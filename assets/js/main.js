@@ -63,5 +63,43 @@ window.addEventListener('load', function () {
             document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
             animate(0);
         }
+        update(deltaTime) {
+            this.time += deltaTime;
+            if (this.time > this.maxTime) this.gameOver = true;
+            this.backgroundLayers.update();
+            this.player.update(this.input.keys, deltaTime);
+            //handleEnemies
+            if (this.enemyTimer > this.enemyInterval) {
+                this.addEnemy();
+                this.enemyTimer = 0;
+            } else {
+                this.enemyTimer += deltaTime;
+            }
+            this.enemies.forEach(enemy => {
+                enemy.update(deltaTime);
+            });
+            //collision spirte
+            this.collisions.forEach((collision) => {
+                collision.update(deltaTime);
+            });
+            //handle floating messages
+            this.floatingMessages.forEach(message => {
+                message.update();
+            });
+            //cooldowntimer
+            if (this.cooldown){
+                if (this.cooldownTimer > this.cooldownInterval) {
+                    this.cooldown = false;
+                    this.cooldownTimer = 0;
+                } else {
+                    this.cooldownTimer += deltaTime;
+                }
+            };
+            //score
+            if (this.score > localStorage.getItem("score")) localStorage.setItem("score", this.score);
+            this.enemies = this.enemies.filter(enemy => !enemy.markedForDeletion);
+            this.collisions = this.collisions.filter(collision => !collision.markedForDeletion);
+            this.floatingMessages = this.floatingMessages.filter(message => !message.markedForDeletion);
+        }
     }
 })
