@@ -31,7 +31,7 @@ body{
 #canvas1 {
     border: 5px solid black;
     position: relative;
-    margin-top: 25vh;
+    margin-top: 12vh;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 100%;
@@ -73,6 +73,13 @@ h1, h2 {
 }
 
 /* Media Queries */
+
+@media (min-height: 550px){
+    #canvas1{
+         margin-top: 25vh;
+    }
+}
+
 @media (min-width: 1800px){
     #canvas1{
          margin-top: 35vh;
