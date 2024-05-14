@@ -6,12 +6,8 @@ import { UI } from './ui.js';
 
 // Runs when page is completed loading assets
 window.addEventListener('load', function () {
-    // Initialisation or update Highscore value on load
-    if (this.document.getElementById("highScore") === null){
-        document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.setItem("score", 0);
-    } else {
-        document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
-    };
+    // Call highScore update function
+    highScore();
     // Initial Canvas Settings for CANVAS API
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
@@ -45,12 +41,12 @@ window.addEventListener('load', function () {
             this.winningScore = 10;
             this.fontColor = 'black';
             this.time = 0;
-            this.maxTime = 30000;
+            this.maxTime = 5000000;
             this.gameOver = false;
             this.hearts = 10; 
             this.player.currentState = this.player.states[0];
             this.player.currentState.enter();
-        }
+        };
         /* restartGame()
            Resets all variables back to original states
            Updates game highscore
@@ -183,3 +179,12 @@ document.getElementById("btn").addEventListener("click", function(){
         " Space / Tap = Attack \n" + " Hash / Long Swipe = Dash \n" + " Press r / Swipe Down = Restart \n" + " Press d = Debug"
     )
 });
+
+// Initialisation or update of Highscore value
+function highScore() {
+    if (localStorage.score) {
+      localStorage.score = localStorage.score;
+    } else {
+      localStorage.score = 0;
+    }
+}
