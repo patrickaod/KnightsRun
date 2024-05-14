@@ -8,6 +8,7 @@ export class InputHandler {
         this.dashTreshold = 100;
         this.atkTreshold = 0;
         this.holdTimer = 2000;
+        // On key down add to this.keys array
         window.addEventListener('keydown', e => {
             if ((e.key === 'ArrowDown' ||
                 e.key === 'ArrowUp' ||
@@ -20,6 +21,7 @@ export class InputHandler {
             } else if (e.key === 'd') this.game.debug = !this.game.debug;
             else if (e.key === 'r' && this.game.gameOver) game.restartGame();
         });
+        // On key up remove to this.keys array
         window.addEventListener('keyup', e => {
             if (e.key === 'ArrowDown' ||
                 e.key === 'ArrowUp' ||
@@ -31,11 +33,13 @@ export class InputHandler {
                 this.keys.splice(this.keys.indexOf(e.key), 1);
             } 
         });
+        // On press down register touch X & Y
         window.addEventListener('touchstart', e => {
             console.log(e);
             this.touchX = e.changedTouches[0].pageX;
             this.touchY = e.changedTouches[0].pageY;  
         });
+        // The difference to the inital position indicates the swipe
         window.addEventListener('touchmove', e => {
             console.log(e);
             // Jump
@@ -67,6 +71,7 @@ export class InputHandler {
              }
             console.log(this.keys);
         });
+        // On end remove touch event fomr this.keys
         window.addEventListener('touchend', e => {
             this.keys.splice(this.keys.indexOf('tap'), 1)
             this.keys.splice(this.keys.indexOf('swipe up'), 1)
