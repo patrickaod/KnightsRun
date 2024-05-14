@@ -71,7 +71,7 @@ export class InputHandler {
              }
             console.log(this.keys);
         });
-        // On end remove touch event fomr this.keys
+        // On end remove touch event from this.keys
         window.addEventListener('touchend', e => {
             this.keys.splice(this.keys.indexOf('tap'), 1)
             this.keys.splice(this.keys.indexOf('swipe up'), 1)
