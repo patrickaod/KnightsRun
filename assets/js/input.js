@@ -35,13 +35,11 @@ export class InputHandler {
         });
         // On press down register touch X & Y
         window.addEventListener('touchstart', e => {
-            console.log(e);
             this.touchX = e.changedTouches[0].pageX;
             this.touchY = e.changedTouches[0].pageY;  
         });
         // The difference to the inital position indicates the swipe
         window.addEventListener('touchmove', e => {
-            console.log(e);
             // Jump
             const swipeDistance = e.changedTouches[0].pageY - this.touchY;
             if( swipeDistance < -this.touchTreshold && this.keys.indexOf('swipe up') === -1){
