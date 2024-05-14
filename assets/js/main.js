@@ -112,8 +112,8 @@ window.addEventListener('load', function () {
                     this.cooldownTimer += deltaTime;
                 }
             };
-            // update local score
-            if (this.score > localStorage.getItem("score")) localStorage.setItem("score", this.score);
+            // update local score every frame
+            if (this.score > localStorage.score) localStorage.setItem("score", this.score);
             /* 
                Array Filters
                Instead of splice, array filters are used to remove marked elements
@@ -184,6 +184,7 @@ document.getElementById("btn").addEventListener("click", function(){
 function highScore() {
     if (localStorage.score) {
       localStorage.score = localStorage.score;
+      document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
     } else {
       localStorage.score = 0;
     }
