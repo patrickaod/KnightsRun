@@ -30,7 +30,7 @@ body{
 /* Game Settings */
 #canvas1 {
     border: 5px solid black;
-    position: relative;
+    position: absolute;
     margin-top: 12vh;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -54,6 +54,12 @@ h1, h2 {
     background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
    -webkit-text-fill-color: transparent;
    background-clip: text;
+}
+
+.banner{
+    position: relative;
+    height: 200px;
+    max-width: 100%;
 }
 
 /* Tutorial Icon Settings */
