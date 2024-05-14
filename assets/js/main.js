@@ -6,13 +6,17 @@ import { UI } from './ui.js';
 
 // Runs when page is completed loading assets
 window.addEventListener('load', function () {
+    // Initialisation or update Highscore value on load
+    if (this.document.getElementById("highScore") === null){
+        document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.setItem("score", 0);
+    } else {
+        document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
+    };
     // Initial Canvas Settings for CANVAS API
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     canvas.width = 500;
     canvas.height = 500;
-    //Updates Score from Local Storage
-    document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
 
     //Game Constructor
     class Game {
