@@ -1,3 +1,4 @@
+// Player state enum
 const states = {
     IDEL: 0,
     CROUCHING: 1,
@@ -8,6 +9,11 @@ const states = {
     HURT: 6,
     DASHING: 7
 }
+/* Player States
+   Player use lexically scoped objects to represent the states
+   a player can be in and to what states it can go to. 
+   This minimizes nessassary or redundant code and make resusablity easier. 
+*/
 
 class State{
     constructor(state, game){
