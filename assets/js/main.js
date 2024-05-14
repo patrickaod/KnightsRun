@@ -41,7 +41,7 @@ window.addEventListener('load', function () {
             this.winningScore = 10;
             this.fontColor = 'black';
             this.time = 0;
-            this.maxTime = 500000;
+            this.maxTime = 30000;
             this.gameOver = false;
             this.hearts = 10; 
             this.player.currentState = this.player.states[0];
