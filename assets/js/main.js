@@ -6,7 +6,7 @@ import { UI } from './ui.js';
 
 // Runs when page is completed loading assets
 window.addEventListener('load', function () {
-    // Canvas Settings
+    // Initial Canvas Settings for CANVAS API
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     canvas.width = 500;
@@ -142,7 +142,7 @@ window.addEventListener('load', function () {
             this.UI.draw(context);
         }
         /* addEnemy() 
-           Enemy selection
+           Enemy selection in terms of player speed every time this method is called
         */
         addEnemy() {
             if (this.speed > 0 && Math.random() < 0.5) this.enemies.push(new GroundEnemy(this));
