@@ -54,8 +54,8 @@ h1, h2 {
     font-size: 6.9vh;
     text-align: center;
     background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
-   -webkit-text-fill-color: transparent;
-   background-clip: text;
+    color: transparent;
+    background-clip: text;
 }
 
 .banner{
