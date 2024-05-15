@@ -8,7 +8,7 @@ const states = {
     ATTACK: 5,
     HURT: 6,
     DASHING: 7
-}
+};
 /* Player States
    Player use lexically scoped objects to represent the states
    a player can be in and to what states it can go to. 
@@ -48,7 +48,7 @@ export class Idel extends State {
 
 export class Crouching extends State {
     constructor(game){
-        super('CROUCHING', game)
+        super('CROUCHING', game);
     }
     enter(){
         this.game.player.frameX = 0;
@@ -73,7 +73,7 @@ export class Crouching extends State {
 
 export class Walking extends State {
     constructor(game){
-        super('WALKING', game)
+        super('WALKING', game);
     }
     enter(){
         this.game.player.frameX = 0;

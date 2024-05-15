@@ -17,7 +17,7 @@ class Layer {
         context.drawImage(this.image, this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
     }
-};
+}
 /* Background Class
    The background class uses the HTML DOM API to list the background assets. 
    Then using the layer class each background is given a game speed. 
@@ -46,12 +46,12 @@ export class Background {
     update() {
         this.backgroundLayers.forEach(layer => {
             layer.update();
-        })
+        });
     }
     draw(context) {
         this.backgroundLayers.forEach(layer => {
             layer.draw(context);
-        })
+        });
     }
 }
 

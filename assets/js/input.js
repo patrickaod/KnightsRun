@@ -47,7 +47,7 @@ export class InputHandler {
                 // Reset
             else if(swipeDistance > this.touchTreshold && this.keys.indexOf('swipe down') === -1){
                 this.keys.push('swipe down');   
-                if (this.game.gameOver) {this.game.restartGame()};
+                if (this.game.gameOver) {this.game.restartGame();}
             }
             //Running
             const swipeDistanceX = e.changedTouches[0].pageX - this.touchX;
@@ -61,22 +61,22 @@ export class InputHandler {
                 {this.keys.push('long swipe');}
             //Attack
                if ((swipeDistanceX < -this.atkTreshold || swipeDistanceX >this.atkTreshold) && this.keys.indexOf('tap') === -1){
-                  this.keys.push('tap')
+                  this.keys.push('tap');
               } else if ((swipeDistance < -this.atkTreshold || swipeDistance > this.atkTreshold) && this.keys.indexOf('tap') === -1 ){
                   this.keys.push('tap');
              }  else {
-                 this.keys.splice(this.keys.indexOf('tap'), 1)
+                 this.keys.splice(this.keys.indexOf('tap'), 1);
              }
             console.log(this.keys);
         });
         // On end remove touch event from this.keys
         window.addEventListener('touchend', e => {
-            this.keys.splice(this.keys.indexOf('tap'), 1)
-            this.keys.splice(this.keys.indexOf('swipe up'), 1)
-            this.keys.splice(this.keys.indexOf('swipe down'), 1)
-            this.keys.splice(this.keys.indexOf('swipe right'), 1)
-            this.keys.splice(this.keys.indexOf('swipe left'), 1)
-            this.keys.splice(this.keys.indexOf('long swipe'), 1)
+            this.keys.splice(this.keys.indexOf('tap'), 1);
+            this.keys.splice(this.keys.indexOf('swipe up'), 1);
+            this.keys.splice(this.keys.indexOf('swipe down'), 1);
+            this.keys.splice(this.keys.indexOf('swipe right'), 1);
+            this.keys.splice(this.keys.indexOf('swipe left'), 1);
+            this.keys.splice(this.keys.indexOf('long swipe'), 1);
         });
 
     }

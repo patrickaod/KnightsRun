@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
             this.hearts = 10; 
             this.player.currentState = this.player.states[0];
             this.player.currentState.enter();
-        };
+        }
         /* restartGame()
            Resets all variables back to original states
            Updates game highscore
@@ -111,7 +111,7 @@ window.addEventListener('load', function () {
                 } else {
                     this.cooldownTimer += deltaTime;
                 }
-            };
+            }
             // update local score every frame
             if (this.score > localStorage.score) localStorage.setItem("score", this.score);
             /* 
@@ -174,10 +174,10 @@ window.addEventListener('load', function () {
 // Tutorial Button
 document.getElementById("btn").addEventListener("click", function(){
     alert(
-        " Tutorial: \n" + " Up Arrow / Swipe Up = Jump \n"
-        + " Right & Left Arrow / Swipe Right = Run \n" + " Down Arrow / Down Swipe = Crouch \n" +
+        " Tutorial: \n" + " Up Arrow / Swipe Up = Jump \n" +
+        " Right & Left Arrow / Swipe Right = Run \n" + " Down Arrow / Down Swipe = Crouch \n" +
         " Space / Tap = Attack \n" + " Hash / Long Swipe = Dash \n" + " Press r / Swipe Down = Restart \n" + " Press d = Debug"
-    )
+    );
 });
 
 // Initialisation or update of Highscore value
