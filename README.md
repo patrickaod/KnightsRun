@@ -284,3 +284,122 @@ The touch controls fat arrow points to a javascript object called changedTouches
         });
     }
 ```
+### Future Features
+
+- Pixel perfect hitboxes 
+- Local multiplayer
+- More enemy types & movement patterns 
+- Platforming 
+- Campaign 
+- Animation sequences 
+- Yet to be Confirmed...
+
+## Tools & Technologies Used
+
+- [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
+- [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
+- [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
+- [![VSCode](https://img.shields.io/badge/VSCode-grey?logo=visualstudiocode&logoColor=007ACC)](https://code.visualstudio.com) used as my local IDE for development.
+- [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
+- [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
+- [![JavaScript](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) used for user interaction on the site.
+- [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-grey?logo=githubpages&logoColor=222222)](https://pages.github.com) used for hosting the deployed front-end site.
+- [![Jest](https://img.shields.io/badge/Jest-grey?logo=jest&logoColor=c21325)](https://jestjs.io) used for automated JavaScript testing.
+- [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
+- [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
+- [![Static Badge](https://img.shields.io/badge/Canvas_API-api?color=grey)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) used to draw game assets.
+- [![Static Badge](https://img.shields.io/badge/HTML_DOM_API-api?color=grey)](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API) used to collect and alter html elements.
+
+## Testing
+> [!NOTE]  
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+## Deployment
+
+The site was deployed to GitHub Pages. The steps to deploy are as follows:
+
+- In the [GitHub repository](https://github.com/patrickaod/KnightsRun), navigate to the Settings tab 
+- From the source section drop-down menu, select the **Main** Branch, then click "Save".
+- The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://patrickaod.github.io/KnightsRun)
+
+### Local Deployment
+
+This project can be cloned or forked in order to make a local copy on your own system.
+
+#### Cloning
+
+You can clone the repository by following these steps:
+
+1. Go to the [GitHub repository](https://github.com/patrickaod/KnightsRun) 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash or Terminal
+5. Change the current working directory to the one where you want the cloned directory
+6. In your IDE Terminal, type the following command to clone my repository:
+	- `git clone https://github.com/patrickaod/KnightsRun.git`
+7. Press Enter to create your local clone.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/patrickaod/KnightsRun)
+
+Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
+A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+#### Forking
+
+By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
+You can fork this repository by using the following steps:
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/patrickaod/KnightsRun)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
+
+### Local VS Deployment
+
+The local deployment of a website exists on a developer's computer during the development phase, where changes and testing occur. The live deployment of a website refers to the process of making the finalized and tested website live on a web server for public access. The local environment is a controlled and private space for development, while the deployment is the public-facing version of the website.
+
+## Credits
+
+### Content
+
+| Source | Location | Notes |
+| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
+| [freeCodeCamp.org in association with Frankslaboratory ](https://www.youtube.com/watch?v=GFO_txvwK_c&ab_channel=freeCodeCamp.org) | game area | JavaScript Game Development Course for Beginners |
+| [W3Schools](https://www.w3schools.com/jsref/prop_win_localstorage.asp) | index page | Window `localStorage()` tutorial |
+| [W3Schools](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_localstorage2) | index page | Window `localStorage()` example |
+| [stack overflow](https://stackoverflow.com/questions/1841452/new-line-in-javascript-alert-box) | index page | New line in JavaScript alert box |
+| [GeeksForGeeks](https://www.geeksforgeeks.org/how-to-create-linear-gradient-text-using-html-and-css/) | index page | How to create linear gradient text using HTML and CSS ? |
+| [W3Schools](https://www.w3schools.com/js/js_array_methods.asp) | game area | JavaScript Array Methods |
+| [W3Schools](https://www.w3schools.com/js/js_htmldom_collections.asp) | game area | JavaScript HTML DOM Collections |
+| [W3Schools](https://www.w3schools.com/jsref/api_canvas.asp) | game area | Canvas API |
+| [cssgradient](https://cssgradient.io/) | index page | linear gradient generator |
+
+
+### Media
+
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [edermunizz @ itch.io](https://edermunizz.itch.io/free-pixel-art-forest) | game area  | image | pixel art forest for parallax background |
+| [JumpButton @ itch.io ](https://jumpbutton.itch.io/girlknightasset) | game area  | image | girl knight character asset |
+| [frankslaboratory](https://www.frankslaboratory.co.uk/downloads/97/enemy_fly.png) | game area  | image | fly enemy |
+| [frankslaboratory](https://www.frankslaboratory.co.uk/downloads/97/enemy_plant.png) | game area  | image | plant enemy |
+| [frankslaboratory](https://www.frankslaboratory.co.uk/downloads/97/enemy_spider_big.png) | game area | image | spider enemy |
+| [xxashuraxx @ itch.io](https://xxashuraxx.itch.io/heart) | game area | image | heart asset |
+| [Font Awesome](https://fontawesome.com/v4/icon/info-circle) | index page | image | information / tutorial button |
+| [favicon.io](https://favicon.io/emoji-favicons/fallen-leaf/) | index page | image | fallen Leaf emoji used as flavicon |
+| [Google Fonts](https://fonts.google.com/specimen/Sedan+SC?query=sedan) | index page | font | titling serif used for all text |
+| [Pixabay](https://pixabay.com/illustrations/night-forest-glowworm-light-3078326/) | index page | image | background image used behind the game area |
+| [Pixabay](https://pixabay.com/illustrations/night-forest-glowworm-light-3078326/) | index page | image | background image used behind the game area |
+| [edermunizz @ itch.io](https://edermunizz.itch.io/free-pixel-art-forest) | documentation  | image | pixel art forest for parallax background |
+
+
+### Acknowledgements
+
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support, and sage advice.
