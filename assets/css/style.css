@@ -42,7 +42,9 @@ body{
     display: flex;
 }
 
-#player, #layer0, #fly, #spider, #plant, #boom, #heart{
+#idel, #attack, #crouch, #dash, #fall, #hurt, #jump, #walk,
+#layer0, #layer1, #layer2, #layer3, #layer4, #layer5, #layer6, #layer7, #layer8, #layer9, #layer10, #layer11,
+#fly, #spider, #plant, #boom, #heart{
     /* Hidding all loaded game assets from user */
     display: none;
 }
