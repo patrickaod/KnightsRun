@@ -28,7 +28,7 @@ export class UI {
             context.textAlign = 'center';
             context.font = this.fontSize * 2 + 'px ' + this.fontFamily;
             if (this.game.score > this.game.winningScore){
-                context.fillText('Boo-yah', this.game.width * 0.5, this.game.height * 0.5 - 20);
+                context.fillText('Yay !!', this.game.width * 0.5, this.game.height * 0.5 - 20);
                 context.font = this.fontSize * 0.7 + 'px ' + this.fontFamily;
                 context.fillText('You Win!!!', this.game.width * 0.5, this.game.height * 0.5 + 20);
             } else {
