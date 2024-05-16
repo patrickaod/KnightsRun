@@ -1,0 +1,15 @@
+{
+  "name": "knightsrun",
+  "version": "1.0.0",
+  "description": "[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/patrickaod/KnightsRun)](https://github.com/patrickaod/KnightsRun/commits/main)\r [![GitHub last commit](https://img.shields.io/github/last-commit/patrickaod/KnightsRun)](https://github.com/patrickaod/KnightsRun/commits/main)\r [![GitHub repo size](https://img.shields.io/github/repo-size/patrickaod/KnightsRun)](https://github.com/patrickaod/KnightsRun)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
