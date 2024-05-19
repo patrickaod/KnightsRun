@@ -167,7 +167,7 @@ Game Area with tutorial icon
 
     - The key input wait for the `addEventListener()` to fire on 'keydown'. Using es6 notation the fat arrow points to an if statement of inputs ready to be placed in an array. These keys are then removed using `splice()` on the keyup. The same is true for the touch controls.
 
-```
+```js
 window.addEventListener('keydown', e => {
             if ((e.key === 'ArrowDown' ||
                 e.key === 'ArrowUp' ||
@@ -194,7 +194,7 @@ window.addEventListener('keydown', e => {
         });
 ```
 The touch controls fat arrow points to a javascript object called changedTouches where the x and y coordinates are stored. These are then used the same way to add (touchstart), change(touchmove), and remove (touchend).
-```
+```js
  // On press down register touch X & Y
         window.addEventListener('touchstart', e => {
             this.touchX = e.changedTouches[0].pageX;
@@ -263,7 +263,7 @@ The touch controls fat arrow points to a javascript object called changedTouches
 
     - The character hitbox has shrunken to the width of the player, but it is not yet dynamic. The code below show shows how this was achieved. The .hasCollided() function prevents multiple hits from the same enemy, avoiding insta-death, and how -1 floatingmessages are fired. The new object is routed through the main game file because the class is exported and imported by the main.js file. Centralising all the code for easy maintainability. 
 
-```
+```js
     checkCollision() {
         this.game.enemies.forEach(enemy => {
             // Hitbox Collision
