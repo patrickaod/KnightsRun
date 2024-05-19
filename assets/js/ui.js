@@ -1,14 +1,6 @@
-/**
- * UI class for rendering game elements.
- * @class UI
- * @constructor
- * @param {Game} game - The game instance.
- */
+// UI class for rendering game elements.
 export class UI {
-    /**
-     * @constructor
-     * @param {Game} game - The game instance.
-     */
+    // UI Constructor
     constructor(game) {
         this.game = game;
         this.fontSize = 40;
@@ -16,11 +8,7 @@ export class UI {
         this.heartImage = document.getElementById('heart');
     }
 
-    /**
-     * Draws the game elements on the canvas.
-     * @method draw
-     * @param {CanvasRenderingContext2D} context - The canvas rendering context.
-     */
+   // Draws the game elements on the canvas.
     draw(context) {
         context.save();
         context.shadowOffsetX = 2;
