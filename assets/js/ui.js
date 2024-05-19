@@ -1,11 +1,27 @@
+/**
+ * UI class for rendering game elements.
+ * @class UI
+ * @constructor
+ * @param {Game} game - The game instance.
+ */
 export class UI {
-    constructor(game){
+    /**
+     * @constructor
+     * @param {Game} game - The game instance.
+     */
+    constructor(game) {
         this.game = game;
         this.fontSize = 40;
         this.fontFamily = 'Sedan SC';
         this.heartImage = document.getElementById('heart');
     }
-    draw(context){
+
+    /**
+     * Draws the game elements on the canvas.
+     * @method draw
+     * @param {CanvasRenderingContext2D} context - The canvas rendering context.
+     */
+    draw(context) {
         context.save();
         context.shadowOffsetX = 2;
         context.shadowOffsetY = 2;
@@ -14,20 +30,24 @@ export class UI {
         context.font = this.fontSize + 'px ' + this.fontFamily;
         context.textAlign = 'left';
         context.fillStyle = this.game.fontColor;
-        //score
+
+        // Draw score
         context.fillText('Score: ' + this.game.score, 20, 50);
-        // timer
+
+        // Draw timer
         context.font = this.fontSize * 0.8 + 'px ' + this.fontFamily;
         context.fillText('Time: ' + (this.game.time * 0.001).toFixed(1), 20, 80);
-        // Hearts
-        for(let i = 0; i < this.game.hearts; i++){
+
+        // Draw hearts
+        for(let i = 0; i < this.game.hearts; i++) {
             context.drawImage(this.heartImage, 25 * i + 12, 85, 40, 40);
-        } 
-        // game over message
-        if (this.game.gameOver){
+        }
+
+        // Draw game over message
+        if (this.game.gameOver) {
             context.textAlign = 'center';
             context.font = this.fontSize * 2 + 'px ' + this.fontFamily;
-            if (this.game.score > this.game.winningScore){
+            if (this.game.score > this.game.winningScore) {
                 context.fillText('Yay !!', this.game.width * 0.5, this.game.height * 0.5 - 20);
                 context.font = this.fontSize * 0.7 + 'px ' + this.fontFamily;
                 context.fillText('You Win!!!', this.game.width * 0.5, this.game.height * 0.5 + 20);
@@ -37,6 +57,7 @@ export class UI {
                 context.fillText('You Lose !!!', this.game.width * 0.5, this.game.height * 0.5 + 20);
             }
         }
+
         context.restore();
     }
 }
