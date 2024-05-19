@@ -84,7 +84,7 @@ Finally, a [fallen Leaf](https://favicon.io/emoji-favicons/fallen-leaf/) favicon
 
 ## Wireframes
 
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+To follow best practices, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ### Mobile Wireframes
@@ -133,25 +133,25 @@ Game Area with tutorial icon
 
 - **Highscore**
 
-    - The highscore use the `localStorage()` window object to store and retrieve the player's greatest score. The feature is manipulated with the `getElementByID()` method. It give alot to the replayability of the site. 
+    - The highScore function uses the `localStorage()` window object to store and retrieve the player's best score. The feature is manipulated by the `getElementByID()` method. It gives a lot to the replayability of the site. 
 
 ![Title Banner](documentation/features/banner.png)
 
 - **Tutorial Icon**
 
-    - After the page is loaded, this button can be click an unlimited amount of times to show the player what to do. It used also manipulated with the `getElementByID()` and `addEventListener("click", function(){})` methods.
+    - After the page is loaded, this button can be clicked an unlimited amount of times to show the player what to do. It used also manipulated with the `getElementByID()` and `addEventListener("click", function(){})` methods.
 
 ![Tutorial Icon](documentation/colour/information-grad.jpeg)
 
 - **Player States**
 
-    - The player states are managed by one file, which are called by other js files to be animated, checked, or effected. The file uses OOP structuring to make the mainability easier over time. Each player state is entered into an enum that can be selected dependent on the current state's input method. The lexically scoped approach makes adding new states easier, and removes the need for "spaghetti code".
+    - The player states are managed by one file, which is called by other js files to be animated, checked, or affected. The file uses OOP structuring to make maintainability easier over time. Each player state is entered into an enum that can be selected dependening on the current state's input method. The lexically scoped approach makes adding new states easier, and removes the need for "spaghetti code".
     
 ![Idel State](documentation/features/idel-state.jpeg)![Crouch State](documentation/features/crouch-state.jpeg)![Running State](documentation/features/running-state.jpeg)
 
 - **Enemies**
 
-    - The game uses three different enemy assets to challenge the play and give score. To win this game the player must achieve a certain score in a given time. There is one constructor with the enemies general settings. Then there are subsequent class that use the `super()` method to inherit previous properties. The unique mob is passed to be `draw()` method to be selected and called to the main game canvas, dependent on a function in the main.js file called `addEnemy()`.
+    - The game uses three different enemy assets to challenge the player. To win this game the player must achieve a certain score by killing enemies in a given time. There is one constructor with the enemy's general settings. Then there are subsequent classes that use the `super()` method to inherit previous properties. The unique mob is passed to be `draw()` method to be selected and called to the main game canvas, dependent on a function in the main.js file called `addEnemy()`.
 
 ![Flying Enemies](assets/img/enemies/enemy_fly.png)
 ![Plant Enemies](assets/img/enemies/enemy_plant.png)
@@ -159,7 +159,7 @@ Game Area with tutorial icon
 
 - **Parallax Background**
 
-    - The background shifts at different speeds dependent on the game speed. Each layer is assigned a speed modifier. The one closer to the front have higher value. If the player stops moving so to does the background. Really adding a new dimension of detail to the game.
+    - The background shifts at different speeds depending on the game speed. Each layer is assigned a speed modifier. The one closer to the front has a higher value. If the player stops moving so too does the background. Adding a new dimension of detail to the game.
 
 ![Parallax Background](documentation/features/para-background.jpeg)
 
@@ -193,7 +193,7 @@ window.addEventListener('keydown', e => {
             } 
         });
 ```
-The touch controls fat arrow points to a javascript object called changedTouches where the x and y co-ordinates are stored. These are then used the same way to add (touchstart), change(touchmove), and remove (touchend).
+The touch controls fat arrow points to a javascript object called changedTouches where the x and y coordinates are stored. These are then used the same way to add (touchstart), change(touchmove), and remove (touchend).
 ```
  // On press down register touch X & Y
         window.addEventListener('touchstart', e => {
@@ -243,25 +243,25 @@ The touch controls fat arrow points to a javascript object called changedTouches
 ```
 - **UI**
 
-    - The UI provides the user with relavent information about their current game such score, time, and life. At the end of the game a win or lose message appears concluding the game. The messages are drawn between the `context.save()` & `context.restore()` methods. These methods keep any changes made to values within the file. The CANVAS API shadow variable is used here to add a white shadow, although this was handle differently in the flaotingmessages.js file. 
+    - The UI provides the user with relevant information about their current game such as score, time, and life. At the end of the game, a win-or-lose message appears concluding the game. The messages are drawn between the `context.save()` & `context.restore()` methods. These methods keep any changes made to values within the file. The CANVAS API shadow variable is used here to add a white shadow, although this was handled differently in the flaotingmessages.js file. 
 
 ![Game UI](documentation/colour/Game-UI-colour.jpeg)
 
 - **Floating Messages**
 
-    - The floating numbers float towards a given x and y position at a given speed, in this case 3% game speed. The image is taken 0.1% speed. The floatingmessages.js file doesn't use the CANVAS API shadow variable as it is slightly more performant to just double the text with a slight offset. 
+    - The floating numbers float towards a given x and y position at a given speed, in this case, 3% game speed. The image is taken at 0.1% speed. The floatingmessages.js file doesn't use the CANVAS API shadow variable as it is slightly more performant to just double the text with a slight offset. 
 
 ![Floating Numbers](documentation/features/floatingnumbers.jpeg)
 
 - **Attack Radius**
 
-    - The attack radius of the character will be very important to the player, so it's set to the maximum point of the animation. As seen below. If the player were to attack the enemy plant would be marked for deletion and then removed using the array `filter()` method from the main game file with another animation from the collisionAnimation.js file. The reason `filter()` is used instead of splice is so the enemy can be removed in the same loop as the animation is running, otherwise it leads to stuttering. 
+    - The attack radius of the character will be very important to the player, so it's set to the maximum point of the animation. As seen below. If the player were to attack the enemy plant would be marked for deletion and then removed using the array `filter()` method from the main game file with another animation from the collisionAnimation.js file. The reason `filter()` is used instead of splice is so the enemy can be removed in the same loop as the animation is running, otherwise, it leads to stuttering. 
 
 ![Tutorial Icon](documentation/features/collision.jpeg)
 
 - **Collision**
 
-    - The character hitbox has strunken to width of the player, but it is not yet dynamic. The code below show shows how this was achieved. The .hasCollided() function prevent multiple hits from the same enemy, avoiding insta-death, and how -1 floatingmessages are fired. The new object is routed through the main game file because the class is exported and imported by the main.js file. Centralising all the code for easy maintainability. 
+    - The character hitbox has shrunken to the width of the player, but it is not yet dynamic. The code below show shows how this was achieved. The .hasCollided() function prevents multiple hits from the same enemy, avoiding insta-death, and how -1 floatingmessages are fired. The new object is routed through the main game file because the class is exported and imported by the main.js file. Centralising all the code for easy maintainability. 
 
 ```
     checkCollision() {
@@ -292,7 +292,6 @@ The touch controls fat arrow points to a javascript object called changedTouches
 - Platforming 
 - Campaign 
 - Animation sequences 
-- Yet to be Confirmed...
 
 ## Tools & Technologies Used
 
