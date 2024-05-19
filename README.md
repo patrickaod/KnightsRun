@@ -306,6 +306,7 @@ The touch controls fat arrow points to a javascript object called changedTouches
 - [![Jest](https://img.shields.io/badge/Jest-grey?logo=jest&logoColor=c21325)](https://jestjs.io) used for automated JavaScript testing.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
+- [![Grammarly](https://img.shields.io/badge/grammarly-spell?logo=grammarly&logoColor=%23027E6F&color=grey)](https://www.grammarly.com/) used for spellchecking.
 - [![Static Badge](https://img.shields.io/badge/Tabnine_AI-purple?color=purple)](https://www.tabnine.com/) used for comments.
 - [![Static Badge](https://img.shields.io/badge/Canvas_API-green?color=green)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) used to draw game assets.
 - [![Static Badge](https://img.shields.io/badge/HTML_DOM_API-green?color=green)](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API) used to collect and alter html elements.
@@ -396,7 +397,7 @@ The local deployment of a website exists on a developer's computer during the de
 | [Pixabay](https://pixabay.com/illustrations/night-forest-glowworm-light-3078326/) | index page | image | background image used behind the game area |
 | [Pixabay](https://pixabay.com/illustrations/night-forest-glowworm-light-3078326/) | index page | image | background image used behind the game area |
 | [edermunizz @ itch.io](https://edermunizz.itch.io/free-pixel-art-forest) | documentation  | image | pixel art forest for parallax background |
-
+| [Font Awesome](https://fontawesome.com/v4/icon/refresh) | index page  | image | refresh button |
 
 ### Acknowledgements
 
