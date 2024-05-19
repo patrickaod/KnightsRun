@@ -20,9 +20,9 @@ export class FloatingMessages {
     // Draws the message on the canvas.
     draw(context){
         context.font = '25px Sedan SC';
-        context.fillStyle = 'white';
-        context.fillText(this.value, this.x, this.y);
         context.fillStyle = 'black';
+        context.fillText(this.value, this.x, this.y);
+        context.fillStyle = '#FF8C42';
         context.fillText(this.value, this.x - 2, this.y - 2);
     }
 }

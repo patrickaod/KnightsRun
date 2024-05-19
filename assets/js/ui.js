@@ -13,11 +13,14 @@ export class UI {
         context.save();
         context.shadowOffsetX = 2;
         context.shadowOffsetY = 2;
-        context.shadowColor = 'white';
+        context.shadowColor = 'black';
         context.shadowBlur = 0;
         context.font = this.fontSize + 'px ' + this.fontFamily;
         context.textAlign = 'left';
-        context.fillStyle = this.game.fontColor;
+        const gradient = context.createLinearGradient(0, 0, 0, 110);
+        gradient.addColorStop(0, '#FEFF7B');
+        gradient.addColorStop(1, '#FF8C42');
+        context.fillStyle = gradient;
 
         // Draw score
         context.fillText('Score: ' + this.game.score, 20, 50);
