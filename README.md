@@ -8,7 +8,7 @@
 ![amIResponsive screenshot](documentation/overview/amIResponsive.jpeg)
 
 KNIGHT’S RUN,
-a scenic interactive indie side-scroller that follows a player controlled character trying to escape the **Endless Night Wood**. The player will face multiple enemy types along their journey, until their time runs out. Utilising OOP to make player and enemy states easily maintainable across the multiple JS files. Key features include a parallax background, collision detection, and touch controls. Achieved with the Canvas and HTML DOM Api, and built with HTML5, CSS3, and vanilla JavaScript. I’m proud to deliver this more than 100 hour lexically scoped project. 
+a scenic interactive indie side-scroller that follows a player-controlled character trying to escape the **Endless Night Wood**. The player will face multiple enemy types along their journey until their time runs out. Utilising OOP to make player and enemy states easily maintainable across multiple JS files. Key features include a parallax background, collision detection, and touch controls. Achieved with the Canvas and HTML DOM API, and built with HTML5, CSS3, and vanilla JavaScript. I’m proud to deliver this more than 100-hour lexically scoped project. 
 
 
 ## UX
