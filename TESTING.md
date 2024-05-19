@@ -50,3 +50,37 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Firefox | ![Firefox Browser](documentation/browser-compt/firefox-browser.png) | |
 | Edge | ![Edge Browser](documentation/browser-compt/edge-browser.png) | |
 
+## Responsiveness
+
+Testing a live or deployed site on multiple devices helps ensure consistent and high-quality user experiences.
+
+I've tested my deployed project on multiple devices to check for responsiveness issues.
+
+| Device | Index | Notes |
+| --- | --- | --- |
+| Mobile (DevTools) | ![Mobile](documentation/responsiveness/mobile.png) | |
+| Tablet (DevTools) | ![Tablet](documentation/responsiveness/tablet.png) | |
+| Desktop (DevTools) | ![Desktop](documentation/responsiveness/laptop.png) | |
+| XL Monitor (DevTools) | ![XL Monitor](documentation/responsiveness/xl-laptop.png) | |
+| 4K Monitor (DevTools) | ![4K Monitor](documentation/responsiveness/4k.png) | |
+| Google Pixel 7 (DevTools) | ![Google Pixel 7](documentation/responsiveness/pixel7.png) | |
+| iPhone 14 Max (DevTools) | ![iPhone 14](documentation/responsiveness/iphone14max.png) | |
+
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Index | ![screenshot](documentation/lighthouse/lighthouse-mobile.jpeg) | ![screenshot](documentation/lighthouse/lighthouse-desk.jpeg) | The mobile version was slighlty slower. As expected it had a harder time loading assets. |
+
+## User Story Testing
+
+| User Story | Screenshot |
+| --- | --- |
+| - As a new site user, I would like to see my score, so that I can feel proud I scored high. | ![Game UI](documentation/colour/Game-UI-colour.jpeg) |
+|- As a new site user, I would like to I would like my progress to be saved, so that I can continue later.| ![banner high score](documentation/features/banner.png) |
+|- As a new site user, I would like the controls to be easy to understand and use, so that I can quickly start to play.| ![tutorial button](documentation/colour/information-grad.jpeg) |
+|- As a returning site user, I would like to just run though the game, so that I can try different strategies. | ![Running State](documentation/features/running-state.jpeg) |
+
+
