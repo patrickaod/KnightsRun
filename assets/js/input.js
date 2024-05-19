@@ -1,4 +1,6 @@
+// Sets the player's state.
 export class InputHandler {
+    // InputHandler Constructor
     constructor(game) {
         this.game = game;
         this.keys = [];
