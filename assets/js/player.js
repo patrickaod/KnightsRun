@@ -1,7 +1,9 @@
 import { Idel, Crouching, Walking, Jumping, Falling, Attack, Hurt, Dashing} from './playerStates.js';
 import { CollisionAnimation } from './collisionAnimation.js';
 import { FloatingMessages } from './floatingMessages.js';
+// The Player class represents the player.
 export class Player {
+    // Player Constructor
     constructor(game) {
         this.game = game;
         this.width = 100;
@@ -24,6 +26,7 @@ export class Player {
         new Hurt(this.game), new Dashing(this.game)];
         this.currentState = null;
     }
+    // Updates the player's state and position based on input and time elapsed.
     update(input, deltaTime) {
         this.checkCollision();
         this.currentState.handleInput(input);
@@ -51,19 +54,23 @@ export class Player {
             this.frameTimer += deltaTime;
         }
     }
+    // Draws the player on the canvas.
     draw(context) {
         if (this.game.debug) context.strokeRect(this.x + 40, this.y + 5, this.width / 4.5, this.height - 5);
         if (this.game.debug) context.strokeRect(this.x, this.y, this.width, this.height);
         context.drawImage(this.image[this.frameY], this.frameX * this.width, 0, this.width, this.height, this.x, this.y, this.width, this.height);
     }
+    // Checks if the player is on the ground.
     onGround() {
         return this.y >= this.game.height - this.height - this.game.groundMargin;
     }
+    // Sets the player's state and speed.
     setState(state, speed) {
         this.currentState = this.states[state];
         this.game.speed = this.game.maxSpeed * speed;
         this.currentState.enter();
     }
+    // Checks for collisions with enemies.
     checkCollision() {
         this.game.enemies.forEach(enemy => {
             //Attack Collision
