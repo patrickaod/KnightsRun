@@ -80,6 +80,24 @@ h1, h2 {
     background: linear-gradient(180deg, #FEFF7B 33%, #FF8C42 100%); 
 }
 
+/* Refresh Button */
+
+#refresh {
+    position: absolute;
+    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%); 
+    border: none; 
+    color: white; 
+    padding: 12px 16px; 
+    font-size: clamp(1.5rem, 2.5vw, 4rem); 
+    cursor: pointer; 
+    bottom: 0%;
+    right: 0%;
+}
+  
+#refresh:hover {
+    background: linear-gradient(180deg, #FEFF7B 33%, #FF8C42 100%); 
+}
+
 /* Media Queries */
 
 @media (min-height: 550px){
