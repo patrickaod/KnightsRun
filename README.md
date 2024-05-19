@@ -48,23 +48,23 @@ For the internal game UI, I chose to stick with black adding just a white shadow
 
 ### Typography
 
-A knight in the woods reminds me of Robin Hood, and for that reason I chose typography to support that a more medieval idea. 
+A Knight in the Woods reminds me of Robin Hood, and for that reason, I chose typography to support a more medieval idea. 
 
 #### Font
 
-A serif font is a great choice for the medieval aspect. More specifiaclly, a titling serif would add extra punch to the limited text a player would see. 
+A serif font is a great choice for the medieval aspect. More specifically, a titling serif would add extra punch to the limited text a player would see. 
 
 [Sedan SC](https://fonts.google.com/specimen/Sedan+SC?stroke=Serif) was the best choice, as the font offered the most emphasis out of the Google serif fonts.
 
-Other quirkier font like [Jacquarda Bastarda 9 Charted](https://fonts.google.com/specimen/Jacquarda+Bastarda+9+Charted?stroke=Serif) were interesting choices, but weren't quite as well fitting.
+Other quirkier fonts like [Jacquarda Bastarda 9 Charted](https://fonts.google.com/specimen/Jacquarda+Bastarda+9+Charted?stroke=Serif) were interesting choices but weren't quite as well fitting.
 
 Serif was chosen as a redundant font in case Google couldn't be reached. 
 
 #### Icons 
 
-To reduce the game UI from obsuring the background a helpful [information circle](https://fontawesome.com/v4/icon/info-circle) from Font Awesome was added to alert the user of the controls.
+To reduce the game UI from obscuring the background a helpful [information circle](https://fontawesome.com/v4/icon/info-circle) from Font Awesome was added to alert the user of the controls.
 
-Finally, a [fallen Leaf](https://favicon.io/emoji-favicons/fallen-leaf/) flavicon was added to give the project a more charming effect but still tie into the old-time nature theme.
+Finally, a [fallen Leaf](https://favicon.io/emoji-favicons/fallen-leaf/) favicon was added to give the project a more charming effect but still tie into the old-time nature theme.
 
 ## User Stories
 
