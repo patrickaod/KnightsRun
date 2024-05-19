@@ -3,7 +3,6 @@ import { InputHandler } from './input.js';
 import { Background } from './background.js';
 import { FlyingEnemy, ClimbingEnemy, GroundEnemy } from './enemies.js';
 import { UI } from './ui.js';
-
 // Runs when page is completed loading assets
 window.addEventListener('load', function () {
     // Call highScore update function
@@ -14,8 +13,9 @@ window.addEventListener('load', function () {
     canvas.width = 500;
     canvas.height = 500;
 
-    //Game Constructor
+    //Game Class
     class Game {
+        //Game Constructor
         constructor(width, height) {
             this.width = width;
             this.height = height;
@@ -189,6 +189,6 @@ function highScore() {
       localStorage.score = 0;
     }
 }
-// Test highScore Export 
-module.exports.highScore = highScore;
-module.exports.Game = Game;
+// // Test highScore Export 
+// module.exports.highScore = highScore;
+// module.exports.Game = Game;
