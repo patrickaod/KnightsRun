@@ -70,7 +70,7 @@ window.addEventListener('load', function () {
             this.debug = false;
             this.cooldown = false;
             this.gameOver = false;
-            document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
+            document.getElementById("highScore").innerHTML = "High Score: " + localStorage.getItem("score");
             animate(0);
         }
         /* update()
@@ -184,7 +184,7 @@ document.getElementById("btn").addEventListener("click", function(){
 function highScore() {
     if (localStorage.score) {
       localStorage.score = localStorage.score;
-      document.getElementById("highScore").innerHTML = "HighScore: " + localStorage.getItem("score");
+      document.getElementById("highScore").innerHTML = "High Score: " + localStorage.getItem("score");
     } else {
       localStorage.score = 0;
     }
