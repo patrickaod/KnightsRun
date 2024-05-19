@@ -1,4 +1,4 @@
-// Class Layer add the background layers in order at a certain speed to n x and y position
+// Class Layer constructor
 class Layer {
     constructor(game, width, height, speedModifier, image) {
         this.game = game;
@@ -9,21 +9,22 @@ class Layer {
         this.x = 0;
         this.y = 0;
     }
+    // Updates the position of the layer based on the game speed and speed modifier
     update() {
         if (this.x < -this.width) this.x = 0;
         else this.x -= this.game.speed * this.speedModifier;
     }
+    // Draws the layer twice on the canvas at its current position and with its specified width and height
     draw(context) {
         context.drawImage(this.image, this.x, this.y, this.width, this.height);
         context.drawImage(this.image, this.x + this.width, this.y, this.width, this.height);
     }
 }
 /* Background Class
-   The background class uses the HTML DOM API to list the background assets. 
-   Then using the layer class each background is given a game speed. 
-   In order to create the parallax effect.
+   Background class that uses the HTML DOM API to list the background assets and adds them to the game using the Layer class 
 */
 export class Background {
+    // Background constructor
     constructor(game) {
         this.game = game;
         this.width = 1667;
@@ -43,11 +44,13 @@ export class Background {
         this.layer11 = new Layer(this.game, this.width, this.height, 0, this.background[19]);
         this.backgroundLayers = [this.layer11, this.layer10, this.layer9, this.layer8, this.layer7, this.layer6, this.layer5, this.layer4, this.layer3, this.layer2, this.layer1, this.layera];
     }
+    //Updates the position of all the layers in the background based on the game speed
     update() {
         this.backgroundLayers.forEach(layer => {
             layer.update();
         });
     }
+     // Draws all the layers in the background on the canvas
     draw(context) {
         this.backgroundLayers.forEach(layer => {
             layer.draw(context);
