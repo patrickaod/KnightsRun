@@ -307,8 +307,9 @@ The touch controls fat arrow points to a javascript object called changedTouches
 - [![Jest](https://img.shields.io/badge/Jest-grey?logo=jest&logoColor=c21325)](https://jestjs.io) used for automated JavaScript testing.
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 - [![Font Awesome](https://img.shields.io/badge/Font_Awesome-grey?logo=fontawesome&logoColor=528DD7)](https://fontawesome.com) used for the icons.
-- [![Static Badge](https://img.shields.io/badge/Canvas_API-api?color=grey)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) used to draw game assets.
-- [![Static Badge](https://img.shields.io/badge/HTML_DOM_API-api?color=grey)](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API) used to collect and alter html elements.
+- [![Static Badge](https://img.shields.io/badge/Tabnine_AI-purple?color=purple)](https://www.tabnine.com/) used for comments.
+- [![Static Badge](https://img.shields.io/badge/Canvas_API-green?color=green)](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) used to draw game assets.
+- [![Static Badge](https://img.shields.io/badge/HTML_DOM_API-green?color=green)](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API) used to collect and alter html elements.
 
 ## Testing
 > [!NOTE]  
