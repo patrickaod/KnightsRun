@@ -73,14 +73,14 @@ Finally, a [fallen Leaf](https://favicon.io/emoji-favicons/fallen-leaf/) favicon
 - As a new site user, I would like to start playing immediately, so that I can enjoy myself.
 - As a new site user, I would like to see my score, so that I can feel proud I scored high.
 - As a new site user, I would like to I would like my progress to be saved, so that I can continue later.
-- As a new site user, I would like to be able to play on both pc and laptop, so that I can take it anywhere.
-- As a new site user, I would like the controls to be easy to understand and use, so that I can quickly start to play.
+- As a new site user, I would like to be able to play on both PC and laptop, so that I can take it anywhere.
+- As a new site user, I would like the controls to be easy to understand and use so that I can quickly start to play.
 
 ### Returning Site Users
 
 - As a returning site user, I would like to see my score from last time, so that I can continue to try and beat it.
 - As a returning site user, I would like the enemy types to change, so that the game can feel fresh.
-- As a returning site user, I would like to just run though the game, so that I can try different strategies.
+- As a returning site user, I would like to just run through the game, so that I can try different strategies.
 
 ## Wireframes
 
