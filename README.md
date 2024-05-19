@@ -13,11 +13,11 @@ a scenic interactive indie side-scroller that follows a player-controlled charac
 
 ## UX
 
-Making a game is one of the best ways to showcase a prowess in javascript. Due to time constraints I needed to make a game that wasn't too resource intensive, too complicated, or require too many dependencies. Ruling out 3D games, RPG's, and deck builders. Leaving me with a selection of 2D game ideas. I chose too make a side-scroller because it was simple, yet complicated enough for me to really showcase my skills. 
+Making a game is one of the best ways to showcase a prowess in JavaScript. Due to time constraints, I needed to make a game that wasn't too resource-intensive, too complicated, or require too many dependencies. Ruling out 3D games, RPGs, and deck builders. Leaving me with a selection of 2D game ideas. I chose to make a side-scroller because it was simple, yet complicated enough for me to showcase my skills. 
 
 The game design was made around a suitable player character. Once a viable character was found I added details until I created the **Endless Night Wood**.
 
-Using online tutorial made this process alot easier, and really enabled me to  give this game the polish it deserves. I'm very proud of this accomplishment. 
+Using online tutorials made this process a lot easier, and enabled me to give this game the polish it deserves. I'm very proud of this accomplishment. 
 
 ### Colour Scheme
 
@@ -25,12 +25,12 @@ As stated above, the game design was centered around a viable player character. 
 
 ![Woodland background for index.html](assets/img/background/night-woods.jpg)
 
-Extracting the colour scheme though [coolor.co](https://coolors.co/image-picker) image picker. Produces this colour scheme: 
+Extracting the colour scheme through [Coolor.co](https://coolors.co/image-picker) image picker. Produces this colour scheme: 
 
 ![Woodland background for index.html](documentation/colour/colour-palette.jpeg)
 
-The produced colour scheme was very homogonous. I wanted to add more contrast to this palette. Unfortunately, due to pricing constrains only five colours can appear on one colour palette with coolor.co.
-I removed the two colours of least importance #396C71, #091E28, and added the main contrasting colour of the background Icterine (#F6F451). I then began a search for another complementary contrasting colour, and ended up with this colour palette:
+The produced colour scheme was very homogenous. I wanted to add more contrast to this palette. Unfortunately, due to pricing constraints, only five colours can appear on one colour palette with Coolor.co.
+I removed the two colours of least importance #396C71,and #091E28, and added the main contrasting colour of the background Icterine (#F6F451). I then began a search for another complementary contrasting colour, and ended up with this colour palette:
 
 ![Contrasting colour palette](documentation/colour/colour-palette-contrast.jpeg)
 
@@ -42,7 +42,7 @@ and tutorial button, also adding a splash of white to help contrast:
 
 ![Information Gradient](documentation/colour/information-grad.jpeg)
 
-For the internal game UI, I chose to stick with black adding just a white shadow. As it more closely matches the enemy assets, and there is the added benefit of highlighting the player assets in an overall drab world. 
+For the internal game UI, I chose to stick with black adding just a white shadow. As it more closely matches the enemy assets, there is the added benefit of highlighting the player assets in an overall drab world. 
 
 ![Game UI](documentation/colour/Game-UI-colour.jpeg)
 
