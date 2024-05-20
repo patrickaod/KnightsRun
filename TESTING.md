@@ -152,10 +152,8 @@ Once ready, to run the tests, use this command:
 
 - `npm test --coverage`
 
-Below are the results from the tests that I've written for this application:
+## Bugs
 
-| Test Suites | Tests | Screenshot |
-| --- | --- | --- |
-| 1 passed | 16 passed | ![screenshot](documentation/tests/js-test-coverage.png) |
-| x | x | repeat for all remaining tests |
+> [!NOTE]
+>  There are no remaining bugs that I am aware of.
 
