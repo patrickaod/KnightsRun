@@ -52,8 +52,25 @@
     <img id="heart" src="assets/img/utility/heart.png" alt="">
     <!-- Background -->
     <img id="indexbg" src="assets/img/background/night-woods.jpg" alt="">
-    <!-- Tutorial Bar -->
-    <button id="btn"><i class="fa fa-info-circle" aria-hidden="true"></i></button>
+    <!-- Tutorial modal -->
+    <button id="btn" data-open-modal><i class="fa fa-info-circle" aria-hidden="true"></i></button>
+    <dialog data-modal class="modal">
+        <div>
+            <h2>Knight's Run Tutorial</h2>
+            <h3>How to Play</h3>
+            <br>
+            <p>Use the left / right arrow keys or swipes to move left and right. </p>
+            <p>Use the up arrow key or swipe to jump.</p> 
+            <p>The down arrow key or swipe to crouch.</p>
+            <p>Use the space bar or tap to attack.</p>
+            <p>Use the hash # key or long swipe to dash.</p>
+            <br>
+            <p>The goal of the game is to collect <b>10 points</b> from monsters before you run out of time.</p>
+            <p>Good luck!</p>
+            <br>
+        </div>
+        <button data-close-modal class="close">Close</button>
+    </dialog>
     <!-- Refresh Button -->
     <button id="refresh" onclick="location.reload()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
     <!-- Script -->
