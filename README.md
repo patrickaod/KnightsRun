@@ -379,6 +379,7 @@ The local deployment of a website exists on a developer's computer during the de
 | [W3Schools](https://www.w3schools.com/js/js_htmldom_collections.asp) | game area | JavaScript HTML DOM Collections |
 | [W3Schools](https://www.w3schools.com/jsref/api_canvas.asp) | game area | Canvas API |
 | [cssgradient](https://cssgradient.io/) | index page | linear gradient generator |
+| [Web Dev Simplified](https://https://www.youtube.com/watch?v=ywtkJkxJsdg&ab_channel=WebDevSimplified.io/) | index page | Tutorial button with modal functionality |
 
 
 ### Media
