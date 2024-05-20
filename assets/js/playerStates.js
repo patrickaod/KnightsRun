@@ -42,8 +42,6 @@ export class Idel extends State {
             this.game.player.setState(states.JUMPING, 1);
         } else if (input.includes(' ')) {
             this.game.player.setState(states.ATTACK, 1);
-        } else if (input.includes('tap')){
-            // tap is not supported
         }
     }
 }
