@@ -11,6 +11,30 @@ body{
     overflow-y: hidden;
 }
 
+h1, h2 {
+    font-size: 6vh;
+    text-align: center;
+    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+h3 {
+    margin-left: 10px;
+    font-size: 3vh;
+    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+p {
+    margin-left: 10px;
+    font-size: 2.5vh;
+    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
+    color: transparent;
+    background-clip: text;   
+}
+
 /* Background Settings */
 #indexbg {
     position: absolute;
@@ -50,13 +74,6 @@ body{
 }
 
 /* Heading Settings */
-h1, h2 {
-    font-size: 6vh;
-    text-align: center;
-    background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%);
-    color: transparent;
-    background-clip: text;
-}
 
 .banner{
     position: relative;
@@ -80,8 +97,20 @@ h1, h2 {
     background: linear-gradient(180deg, #FEFF7B 33%, #FF8C42 100%); 
 }
 
-/* Refresh Button */
+/* Modal */
 
+.modal{
+    background-color: #2B4F59;
+    margin: auto;
+    max-width: 100%;
+}
+
+.close {
+    padding: 5px 5px; 
+    font-size: clamp(0.9rem, 2.5vw, 4rem); 
+}
+
+/* Refresh Button */
 #refresh {
     position: absolute;
     background: linear-gradient(180deg, #FEFF7B 0%, #FF8C42 100%); 
