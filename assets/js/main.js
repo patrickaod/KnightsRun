@@ -175,14 +175,26 @@ const openButton = document.getElementById("btn");
 const closeButton = document.querySelector("[data-close-modal]");
 const modal = document.querySelector("[data-modal]");
 
+/*
+ * Event listener for the open button of the modal.
+ * Opens the modal when the information button is clicked.
+ */
 openButton.addEventListener("click", () => {
     modal.showModal();
 });
 
+/*
+ * Event listener for the close button of the modal.
+ * Closes the modal when the close button is clicked.
+ */
 closeButton.addEventListener("click", () => {
     modal.close();
 });
 
+/*
+ * Event listener for the close cosition of the modal.
+ * Closes the modal when the user clicks off the area.
+ */
 modal.addEventListener("click", e => {
     const dialogDimensions = modal.getBoundingClientRect();
     if ( 
