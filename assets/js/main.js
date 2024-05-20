@@ -216,6 +216,3 @@ function highScore() {
       localStorage.score = 0;
     }
 }
-// // Test highScore Export 
-// module.exports.highScore = highScore;
-// module.exports.Game = Game;
