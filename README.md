@@ -321,6 +321,9 @@ The game over state is automatically triggered when the player receives X amount
 - Platforming 
 - Campaign 
 - Animation sequences 
+- Add variable refresh rate 
+- Add a pause feature
+- Add screen reader accessability
 
 ## Tools & Technologies Used
 
