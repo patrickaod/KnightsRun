@@ -166,9 +166,6 @@ Game Area with tutorial icon
     }
     });
     ```
-
-
-
 - **Player States**
 
     - The player states are managed by one file, which is called by other js files to be animated, checked, or affected. The file uses OOP structuring to make maintainability easier over time. Each player state is entered into an enum that can be selected dependening on the current state's input method. The lexically scoped approach makes adding new states easier, and removes the need for "spaghetti code".
@@ -271,13 +268,13 @@ The touch controls fat arrow points to a javascript object called changedTouches
 
     - The UI provides the user with relevant information about their current game such as score, time, and life. At the end of the game, a win-or-lose message appears concluding the game. The messages are drawn between the `context.save()` & `context.restore()` methods. These methods keep any changes made to values within the file. The CANVAS API shadow variable is used here to add a white shadow, although this was handled differently in the flaotingmessages.js file. 
 
-![Game UI](documentation/colour/Game-UI-colour.jpeg)
+![Game UI](documentation/features/gameover-state.jpeg)
 
 - **Floating Messages**
 
     - The floating numbers float towards a given x and y position at a given speed, in this case, 3% game speed. The image is taken at 0.1% speed. The floatingmessages.js file doesn't use the CANVAS API shadow variable as it is slightly more performant to just double the text with a slight offset. 
 
-![Floating Numbers](documentation/features/floatingnumbers.jpeg)
+![floating messages](documentation/features/floating-messages.jpeg)
 
 - **Attack Radius**
 
