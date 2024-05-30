@@ -78,10 +78,10 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | User Story | Screenshot |
 | --- | --- |
-| - As a new site user, I would like to see my score, so that I can feel proud I scored high. | ![Game UI](documentation/colour/Game-UI-colour.jpeg) |
-|- As a new site user, I would like to I would like my progress to be saved, so that I can continue later.| ![banner high score](documentation/features/banner.png) |
-|- As a new site user, I would like the controls to be easy to understand and use, so that I can quickly start to play.| ![tutorial button](documentation/colour/information-grad.jpeg) |
-|- As a returning site user, I would like to just run though the game, so that I can try different strategies. | ![Running State](documentation/features/running-state.jpeg) |
+| - As a new site user, I would like to see my score, so that I can keep track of my score. | ![score and time ui](documentation/features/score-time-ui.jpeg) |
+|- As a new site user, I would like to I would like my progress to be saved, so that I can continue later.| ![banner high score](documentation/features/local-highscore.jpeg) |
+|- As a new site user, I would like the controls to be easy to understand and use, so that I can quickly start to play.| ![tutorial button](documentation/features/modal.jpeg) |
+|- As a returning site user, I would like to just run though the game, so that I can try different strategies. | ![attack state](assets/img/hero/attack.png) ![crouch state](assets/img/hero/crouching.png) ![jump state](assets/img/hero/jump.gif)|
 
 ## Automated Testing
 
