@@ -34,17 +34,22 @@ I removed the two colours of least importance #396C71,and #091E28, and added the
 
 ![Contrasting colour palette](documentation/colour/colour-palette-contrast.jpeg)
 
-I then used Icterine (#F6F451) & Pumpkin (#FF7518) in a 180&deg; linear gradient for all the external game features like the title: 
+I then used Icterine (#F6F451) & Pumpkin (#FF7518) for all the game's UI elements. Generally, applied in a 180&deg; CSS3 linear gradient. For example, the title banner:
 
-![Title Gradient](documentation/colour/title-grad.jpeg)
+![banner gradient](documentation/colour/title-grad.jpeg)
 
-and tutorial button, also adding a splash of white to help contrast:
+The tutorial and restart buttons use the same gradient, but increases the Icterine (#F6F451) value from 0% to 33% to emphasize hovering. The white font-awesome icons help add contrast to the buttons, as seen below:
 
-![Information Gradient](documentation/colour/information-grad.jpeg)
+![external buttons](documentation/features/external-buttons.jpeg)
 
-For the internal game UI, I chose to stick with black adding just a white shadow. As it more closely matches the enemy assets, there is the added benefit of highlighting the player assets in an overall drab world. 
+The information modal that displays from the infomration icon continues the linear backgorund effect, but also uses the main color found in the background pallete Dark slate - #2B4F59 as the background. The button is kept as default to keep contrast. Please see below:
 
-![Game UI](documentation/colour/Game-UI-colour.jpeg)
+![information modal](documentation/features/modal.jpeg)
+
+The internal game UI uses javascript through the Canvas API to display it's contents, so a different technique had to be implemented to achieve a similar effect. Utilising the Canvas API's createLinearGradient(), addColorStop(), and fillStyle(), I was able to manipulate the game object to resemble the required effect, as seen below:
+
+![information modal](documentation/features/gameover-state.jpeg)
+
 
 ### Typography
 
