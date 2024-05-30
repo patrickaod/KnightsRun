@@ -157,7 +157,7 @@ Once ready, to run the tests, use this command:
 
 #### Local Storage Test Suite 
 
-I attempted to create a JEST test suite for the main.js file, but due to having multiple js files the test suite was to complex for me complete. As JavaScript classes aren't covered in the course content I had to look online for a solution. Unfortunately, I was unable to locate a complete solution for this problem. Below is the code I attempted when trying to mock the local storage function that displays the player's highscore. 
+I attempted to create a JEST test suite for the main.js file, but due to having multiple js files the test suite was to complex for me too complete. As JavaScript classes aren't covered in the course content I had to look online for a solution. Unfortunately, I was unable to locate a complete solution for this problem. Below is the code I attempted when trying to mock the local storage function that displays the player's high score. 
 
 ```js
 /**
