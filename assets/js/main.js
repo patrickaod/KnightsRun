@@ -170,7 +170,7 @@ window.addEventListener('load', function () {
     animate(0);
 });
 
-// Tutorial Button
+// Tutorial Button: Tutorial by Web Dev Simplified @ https://www.youtube.com/watch?v=ywtkJkxJsdg&ab_channel=WebDevSimplified
 const openButton = document.getElementById("btn");
 const closeButton = document.querySelector("[data-close-modal]");
 const modal = document.querySelector("[data-modal]");
