@@ -146,7 +146,28 @@ Game Area with tutorial icon
 
     - After the page is loaded, this button can be clicked an unlimited amount of times to show the player what to do. It used also manipulated with the `getElementByID()` and `addEventListener("click", function(){})` methods.
 
-![Tutorial Icon](documentation/colour/information-grad.jpeg)
+    ![Tutorial Icon](documentation/colour/information-grad.jpeg)
+
+    - A modal then displays the tutorial information for the player. 
+
+    ![tutorial modal](documentation/features/modal.jpeg)
+
+    - The player can then click anywhere on the screen to close the modal, using:
+    ```js
+        modal.addEventListener("click", e => {
+    const dialogDimensions = modal.getBoundingClientRect();
+    if ( 
+        e.clientX < dialogDimensions.left ||
+        e.clientX < dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY < dialogDimensions.bottom
+    ) {
+        modal.close();
+    }
+    });
+    ```
+
+
 
 - **Player States**
 
