@@ -166,6 +166,11 @@ Game Area with tutorial icon
     }
     });
     ```
+- **Restart Button**
+    - The restart button allows the player to refresh the page. Using the `onclick="location.reload()"` function.
+
+    ![restart button](documentation/features/restart.jpeg)
+
 - **Player States**
 
     - The player states are managed by one file, which is called by other js files to be animated, checked, or affected. The file uses OOP structuring to make maintainability easier over time. Each player state is entered into an enum that can be selected dependening on the current state's input method. The lexically scoped approach makes adding new states easier, and removes the need for "spaghetti code".
