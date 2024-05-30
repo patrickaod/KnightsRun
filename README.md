@@ -152,7 +152,7 @@ Game Area with tutorial icon
 
     - The player states are managed by one file, which is called by other js files to be animated, checked, or affected. The file uses OOP structuring to make maintainability easier over time. Each player state is entered into an enum that can be selected dependening on the current state's input method. The lexically scoped approach makes adding new states easier, and removes the need for "spaghetti code".
     
-![Idel State](documentation/features/idel-state.jpeg)![Crouch State](documentation/features/crouch-state.jpeg)![Running State](documentation/features/running-state.jpeg)
+![Idel State](assets/img/hero/idle.png)![Crouch State](assets/img/hero/crouching.png)![Running State](assets/img/hero/walking.png)
 
 - **Enemies**
 
