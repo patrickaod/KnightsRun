@@ -48,7 +48,7 @@ The information modal that displays from the infomration icon continues the line
 
 The internal game UI uses javascript through the Canvas API to display it's contents, so a different technique had to be implemented to achieve a similar effect. Utilising the Canvas API's createLinearGradient(), addColorStop(), and fillStyle(), I was able to manipulate the game object to resemble the required effect, as seen below:
 
-![information modal](documentation/features/gameover-state.jpeg)
+![game over state](documentation/features/gameover-state.jpeg)
 
 
 ### Typography
