@@ -314,7 +314,7 @@ The touch controls fat arrow points to a javascript object called changedTouches
 ```
 
 - **Game Over**
-The game over state is automatically triggered when the player receives X amount of damage or the game time expires. This activates the gameOver varible, which then prevents the next frame from being loaded. The player is then given an option to restart the game as seen below using the `restartGame()` function:
+The game over state is automatically triggered when the player receives X amount of damage or the game time expires. This activates the gameOver variable, which then prevents the next frame from being loaded. The player is then given the option to restart the game as seen below using the `restartGame()` function:
 
 ![game over state](documentation/features/gameover-state.jpeg)
 
