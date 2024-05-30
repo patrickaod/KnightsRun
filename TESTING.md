@@ -81,7 +81,9 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | - As a new site user, I would like to see my score, so that I can keep track of my score. | ![score and time ui](documentation/features/score-time-ui.jpeg) |
 |- As a new site user, I would like to I would like my progress to be saved, so that I can continue later.| ![banner high score](documentation/features/local-highscore.jpeg) |
 |- As a new site user, I would like the controls to be easy to understand and use, so that I can quickly start to play.| ![tutorial button](documentation/features/modal.jpeg) |
-|- As a returning site user, I would like to just run though the game, so that I can try different strategies. | ![attack state](assets/img/hero/attack.png) ![crouch state](assets/img/hero/crouching.png) ![jump state](assets/img/hero/jump.gif)|
+|- As a returning site user, I would like to just run though the game, so that I can try different strategies. | ![attack state](assets/img/hero/attack.png) ![crouch state](assets/img/hero/crouching.png) ![jump state](assets/img/hero/jump.gif)| 
+|- As a new or existing user, I would like to be able to restart the game, so that I can continue if anything goes wrong. | ![restart button](documentation/features/restart.jpeg)|
+|- As a new or existing user, I would like to be able to play the game on different devices, so that I can continue playing anywhere. | ![game over state](documentation/features/gameover-state.jpeg)|
 
 ## Automated Testing
 
