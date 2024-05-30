@@ -155,6 +155,73 @@ Once ready, to run the tests, use this command:
 
 - `npm test --coverage`
 
+#### Local Storage Test Suite 
+
+I attempted to create a JEST test suite for the main.js file, but due to having multiple js files the test suite was to complex for me complete. As JavaScript classes aren't covered in the course content I had to look online for a solution. Unfortunately, I was unable to locate a complete solution for this problem. Below is the code I attempted when trying to mock the local storage function that displays the player's highscore. 
+
+```js
+/**
+ * @jest-environment jsdom
+ */
+
+const { test, expect } = require("@jest/globals");
+const { highScore, Game } = require("./main.test.js");
+beforeAll(() => {
+    let fs = require("fs");
+    let fileContents = fs.readFileSync("assets/js/main.js", "utf-8");
+    document.open();
+    document.write(fileContents);
+    document.close();
+});
+
+// Test that the game correctly updates and handles local high score.
+describe(`Game High Score Test`, () => {
+    let game;
+    let ctx;
+    let canvas;
+    let localStorageMock;
+
+    beforeEach(() => {
+        canvas = document.createElement("canvas");
+        canvas.width = 500;
+        canvas.height = 500;
+        ctx = canvas.getContext("2d");
+        localStorageMock = {
+            getItem: jest.fn(),
+            setItem: jest.fn()
+        };
+        Object.defineProperty(window, "localStorage", {
+            value: localStorageMock
+        });
+        window.localStorage = localStorageMock;
+
+        console.log('Before creating game instance');
+        try {
+            game = new Game(canvas.width, canvas.height);
+            console.log('After creating game instance', game);
+        } catch (error) {
+            console.error('Error creating game instance:', error);
+        }
+    });
+
+    test('Updates highScore element with correct format', () => {
+        // Set initial score in localStorage
+        localStorage.setItem('score', '100');
+
+        // Call highScore function
+        highScore();
+
+        // Check if highScore element's innerHTML is updated correctly
+        const highScoreElement = document.getElementById('highScore');
+        expect(highScoreElement.innerHTML).toBe('HighScore: 100');
+    });
+});
+
+if (typeof module !== "undefined") module.exports = {
+    highScore, Game
+};
+```
+
 ## Bugs
 
 > [!NOTE]
