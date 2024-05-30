@@ -238,6 +238,14 @@ if (typeof module !== "undefined") module.exports = {
 
     ![restored player asset](documentation/bugs/replace-crouch.jpeg)
 
+## Unfixed Bugs
+
+- The player controls on mobile devices are difficult to use. This is due to the implementation of the tap touch control. The tap touch control is always triggered when the player interacts with the screen interfering with other inputs. I've been unable to find a solution for this issue, but the game is still playable while more challenging.
+
+- After downloading the NVDA screen reader, I became aware that the software would prevent users from interacting with the game environment. This requires further investigation to solve this compatibility issue. Currently, there is no support for screen readers or voice controls.
+
+- The refresh rate of the game is tied to how fast a computer can deliver the next frame. The faster the computer the faster a frame can be delivered. The game has been tested on multiple devices with the only refresh issue being the increased challenge applied to faster devices. Unfortunately, I haven't got the resources to test a frame rate limit, and further investigation is required to accurately model the performance of better devices.  
+
 > [!NOTE]
 >  There are no remaining bugs that I am aware of.
 
