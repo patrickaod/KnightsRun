@@ -23,16 +23,16 @@ Using online tutorials made this process a lot easier, and enabled me to give th
 
 As stated above, the game design was centered around a viable player character. The background asset that worked best was a [woodland parallax](). To give a greater depth to the pixelated parallax I added a beautiful woodland image.
 
-![Woodland background for index.html](assets/img/background/night-woods.jpg)
+![woodland background for index.html](assets/img/background/night-woods.jpg)
 
 Extracting the colour scheme through [Coolor.co](https://coolors.co/image-picker) image picker. Produces this colour scheme: 
 
-![Woodland background for index.html](documentation/colour/colour-palette.jpeg)
+![woodland background for index.html](documentation/colour/colour-palette.jpeg)
 
 The produced colour scheme was very homogenous. I wanted to add more contrast to this palette. Unfortunately, due to pricing constraints, only five colours can appear on one colour palette with Coolor.co.
 I removed the two colours of least importance #396C71,and #091E28, and added the main contrasting colour of the background Icterine (#F6F451). I then began a search for another complementary contrasting colour, and ended up with this colour palette:
 
-![Contrasting colour palette](documentation/colour/colour-palette-contrast.jpeg)
+![contrasting colour palette](documentation/colour/colour-palette-contrast.jpeg)
 
 I then used Icterine (#F6F451) & Pumpkin (#FF7518) for all the game's UI elements. Generally, applied in a 180&deg; CSS3 linear gradient. For example, the title banner:
 
@@ -98,10 +98,10 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 <summary> Click here to see the Mobile Wireframes </summary>
 
 Game Area with tutorial box 
-  - ![Phone with bar](documentation/wireframe/phone-bar.png)
+  - ![phone with bar](documentation/wireframe/phone-bar.png)
 
 Game Area with tutorial icon
-  - ![Phone with icon](documentation/wireframe/phone-icon.png)
+  - ![phone with icon](documentation/wireframe/phone-icon.png)
 
 </details>
 
@@ -111,10 +111,10 @@ Game Area with tutorial icon
 <summary> Click here to see the Tablet Wireframes </summary>
 
 Game Area with tutorial box 
-  - ![Tablet with bar](documentation/wireframe/ipad-bar.png)
+  - ![tablet with bar](documentation/wireframe/ipad-bar.png)
 
 Game Area with tutorial icon
-  - ![Tablet with icon](documentation/wireframe/ipad-icon.png)
+  - ![tablet with icon](documentation/wireframe/ipad-icon.png)
 
 
 </details>
@@ -125,10 +125,10 @@ Game Area with tutorial icon
 <summary> Click here to see the Desktop Wireframes </summary>
 
 Game Area with tutorial box 
-  - ![Window with bar](documentation/wireframe/window-bar.png)
+  - ![window with bar](documentation/wireframe/window-bar.png)
 
 Game Area with tutorial icon
-  - ![Window with icon](documentation/wireframe/window-icon.png)
+  - ![window with icon](documentation/wireframe/window-icon.png)
 
 </details>
 
@@ -140,13 +140,13 @@ Game Area with tutorial icon
 
     - The highScore function uses the `localStorage()` window object to store and retrieve the player's best score. The feature is manipulated by the `getElementByID()` method. It gives a lot to the replayability of the site. 
 
-![Title Banner](documentation/features/banner.png)
+![title Banner](documentation/features/banner.png)
 
 - **Tutorial Icon**
 
     - After the page is loaded, this button can be clicked an unlimited amount of times to show the player what to do. It used also manipulated with the `getElementByID()` and `addEventListener("click", function(){})` methods.
 
-    ![Tutorial Icon](documentation/colour/information-grad.jpeg)
+    ![tutorial Icon](documentation/colour/information-grad.jpeg)
 
     - A modal then displays the tutorial information for the player. 
 
@@ -175,21 +175,21 @@ Game Area with tutorial icon
 
     - The player states are managed by one file, which is called by other js files to be animated, checked, or affected. The file uses OOP structuring to make maintainability easier over time. Each player state is entered into an enum that can be selected dependening on the current state's input method. The lexically scoped approach makes adding new states easier, and removes the need for "spaghetti code".
     
-![Idel State](assets/img/hero/idle.png)![Crouch State](assets/img/hero/crouching.png)![Running State](assets/img/hero/walking.png)
+![idel state](assets/img/hero/idle.png)![crouch state](assets/img/hero/crouching.png)![running state](assets/img/hero/walking.png)
 
 - **Enemies**
 
     - The game uses three different enemy assets to challenge the player. To win this game the player must achieve a certain score by killing enemies in a given time. There is one constructor with the enemy's general settings. Then there are subsequent classes that use the `super()` method to inherit previous properties. The unique mob is passed to be `draw()` method to be selected and called to the main game canvas, dependent on a function in the main.js file called `addEnemy()`.
 
-![Flying Enemies](assets/img/enemies/enemy_fly.png)
-![Plant Enemies](assets/img/enemies/enemy_plant.png)
-![Spider Enemies](assets/img/enemies/enemy_spider_big.png)
+![flying enemies](assets/img/enemies/enemy_fly.png)
+![plant enemies](assets/img/enemies/enemy_plant.png)
+![spider enemies](assets/img/enemies/enemy_spider_big.png)
 
 - **Parallax Background**
 
     - The background shifts at different speeds depending on the game speed. Each layer is assigned a speed modifier. The one closer to the front has a higher value. If the player stops moving so too does the background. Adding a new dimension of detail to the game.
 
-![Parallax Background](documentation/features/para-background.jpeg)
+![parallax background](documentation/features/para-background.jpeg)
 
 - **Key/Swipe Controls**
 
@@ -273,7 +273,7 @@ The touch controls fat arrow points to a javascript object called changedTouches
 
     - The UI provides the user with relevant information about their current game such as score, time, and life. At the end of the game, a win-or-lose message appears concluding the game. The messages are drawn between the `context.save()` & `context.restore()` methods. These methods keep any changes made to values within the file. The CANVAS API shadow variable is used here to add a white shadow, although this was handled differently in the flaotingmessages.js file. 
 
-![Game UI](documentation/features/gameover-state.jpeg)
+![game ui](documentation/features/gameover-state.jpeg)
 
 - **Floating Messages**
 
@@ -285,7 +285,7 @@ The touch controls fat arrow points to a javascript object called changedTouches
 
     - The attack radius of the character will be very important to the player, so it's set to the maximum point of the animation. As seen below. If the player were to attack the enemy plant would be marked for deletion and then removed using the array `filter()` method from the main game file with another animation from the collisionAnimation.js file. The reason `filter()` is used instead of splice is so the enemy can be removed in the same loop as the animation is running, otherwise, it leads to stuttering. 
 
-![Tutorial Icon](documentation/features/collision.jpeg)
+![tutorial icon](documentation/features/collision.jpeg)
 
 - **Collision**
 
