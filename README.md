@@ -21,7 +21,7 @@ Using online tutorials made this process a lot easier, and enabled me to give th
 
 ### Colour Scheme
 
-As stated above, the game design was centered around a viable player character. The background asset that worked best was a [woodland parallax](). To give a greater depth to the pixelated parallax I added a beautiful woodland image.
+As stated above, the game design was centered around a viable player character. The background asset that worked best was a [woodland parallax](https://edermunizz.itch.io/free-pixel-art-forest). To give a greater depth to the pixelated parallax I added a beautiful woodland image.
 
 ![woodland background for index.html](assets/img/background/night-woods.jpg)
 
