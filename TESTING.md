@@ -224,6 +224,20 @@ if (typeof module !== "undefined") module.exports = {
 
 ## Bugs
 
+- player.js:61  Uncaught DOMException: Failed to execute 'drawImage' on 'CanvasRenderingContext2D': The HTMLImageElement provided is in the 'broken' state.
+
+    at Player.draw (https://patrickaod.github.io/KnightsRun/assets/js/player.js:61:17)
+
+    at Game.draw (https://patrickaod.github.io/KnightsRun/assets/js/main.js:131:25)
+
+    at animate (https://patrickaod.github.io/KnightsRun/assets/js/main.js:165:14)
+
+    ![missing player asset](documentation/bugs/missing-crouch.jpeg)
+
+    - I fixed this, by adding the missing player asset.
+
+    ![restored player asset](documentation/bugs/replace-crouch.jpeg)
+
 > [!NOTE]
 >  There are no remaining bugs that I am aware of.
 
